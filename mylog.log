@@ -1,0 +1,13 @@
+21:39:13.130 [http-nio-8080-exec-1] INFO  output - User creation failure
+21:39:13.308 [http-nio-8080-exec-1] INFO  output - User creation success
+21:39:15.060 [http-nio-8080-exec-3] INFO  output - User creation failure
+21:39:50.481 [http-nio-8080-exec-8] INFO  output - Order success
+19:27:06.702 [http-nio-8080-exec-4] INFO  output - User creation failure
+19:27:06.907 [http-nio-8080-exec-4] INFO  output - User creation success
+19:28:06.722 [http-nio-8080-exec-10] INFO  output - User creation failure
+19:28:06.863 [http-nio-8080-exec-10] INFO  output - User creation success
+19:29:01.505 [http-nio-8080-exec-5] INFO  output - Order success
+19:29:35.808 [http-nio-8080-exec-7] INFO  output - Order failure due to user not present
+19:33:42.523 [http-nio-8080-exec-10] INFO  output - Order failure due to user not present
+19:33:53.656 [http-nio-8080-exec-1] INFO  output - Order success
+19:34:16.788 [http-nio-8080-exec-4] INFO  output - Order success
