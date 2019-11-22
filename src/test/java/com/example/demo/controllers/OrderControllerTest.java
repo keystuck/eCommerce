@@ -22,7 +22,6 @@ import static org.mockito.Mockito.when;
 public class OrderControllerTest {
     private OrderController orderController;
     private UserRepository userRepo = mock(UserRepository.class);
-    private CartRepository cartRepo = mock(CartRepository.class);
 
     private String testUserName = "testUserName";
 
@@ -30,7 +29,6 @@ public class OrderControllerTest {
     public void setUp(){
         orderController = new OrderController();
         TestUtils.injectObjects(orderController, "userRepository", userRepo);
-        TestUtils.injectObjects(orderController, "cartRepository", cartRepo);
     }
 
     @Test
@@ -42,27 +40,8 @@ public class OrderControllerTest {
 
         ResponseEntity<UserOrder> response = orderController.submit(testUserName);
         assertNotNull(response);
-        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
 
     }
-/*
-	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
-		Optional<User> optionalUser = userRepository.findByUsername(username);
-		if(!optionalUser.isPresent()) {
-			return ResponseEntity.notFound().build();
-		}
-		UserOrder order = UserOrder.createFromCart(optionalUser.get().getCart());
-		orderRepository.save(order);
-		return ResponseEntity.ok(order);
-	}
 
-	@GetMapping("/history/{username}")
-	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
-		Optional<User> optionalUser = userRepository.findByUsername(username);
-		if(!optionalUser.isPresent()) {
-			return ResponseEntity.notFound().build();
-		}
-		return ResponseEntity.ok(orderRepository.findByUser(optionalUser.get()));
-	}
- */
 }

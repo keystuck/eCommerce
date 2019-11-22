@@ -40,6 +40,10 @@ public class OrderController {
 			log.info("Order failure due to user not present");
 			return ResponseEntity.notFound().build();
 		}
+		if (optionalUser.get().getCart() == null){
+			log.info("Order failure due to empty cart");
+			return ResponseEntity.notFound().build();
+		}
 		UserOrder order = UserOrder.createFromCart(optionalUser.get().getCart());
 		orderRepository.save(order);
 		log.info("Order success");
