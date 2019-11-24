@@ -43,7 +43,12 @@ public class UserController {
 	
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
-		return ResponseEntity.of(userRepository.findByUsername(username));
+		Optional<User> optionalUser = userRepository.findByUsername(username);
+		if (optionalUser != null) {
+			return ResponseEntity.of(userRepository.findByUsername(username));
+		} else {
+			return ResponseEntity.notFound().build();
+		}
 	}
 	
 	@PostMapping("/create")

@@ -37,3 +37,14 @@
 2019-11-23 19:03:49,476 [http-nio-9090-exec-3] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
 2019-11-23 19:03:55,928 [http-nio-9090-exec-6] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
 2019-11-23 19:04:04,632 [http-nio-9090-exec-9] INFO  output - SUCCESS - USER CREATION
+2019-11-23 19:07:16,871 [http-nio-9090-exec-10] INFO  output - SUCCESS - ORDER
+2019-11-23 19:07:25,229 [http-nio-9090-exec-1] INFO  output - SUCCESS - ORDER
+2019-11-23 19:07:41,377 [http-nio-9090-exec-3] INFO  output - SUCCESS - ORDER
+2019-11-23 19:07:56,776 [http-nio-9090-exec-6] INFO  output - SUCCESS - ORDER
+2019-11-23 19:08:03,164 [http-nio-9090-exec-7] INFO  output - SUCCESS - ORDER
+2019-11-24 14:47:44,400 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
+2019-11-24 14:47:44,407 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
+2019-11-24 14:48:25,134 [main] INFO  output - SUCCESS - USER CREATION
+2019-11-24 14:48:25,158 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
+2019-11-24 14:48:25,160 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
+2019-11-24 14:48:36,849 [main] INFO  output - FAILURE - ORDER -  empty cart
