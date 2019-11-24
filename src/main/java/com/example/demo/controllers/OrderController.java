@@ -41,12 +41,12 @@ public class OrderController {
 			return ResponseEntity.notFound().build();
 		}
 		if (optionalUser.get().getCart() == null){
-			log.info("Order failure due to empty cart");
+			log.info("FAILURE - ORDER -  empty cart");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(optionalUser.get().getCart());
 		orderRepository.save(order);
-		log.info("Order success");
+		log.info("SUCCESS - ORDER");
 		return ResponseEntity.ok(order);
 	}
 	

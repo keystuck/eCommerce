@@ -48,6 +48,10 @@ public class UserController {
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
+		if (findByUserName(createUserRequest.getUsername()).getStatusCode() == HttpStatus.OK){
+			log.info("FAILURE - USER CREATION - duplicate username");
+			return ResponseEntity.badRequest().build();
+		}
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		Cart cart = new Cart();
@@ -55,14 +59,14 @@ public class UserController {
 		user.setCart(cart);
 		if (createUserRequest.getPassword().length() < 7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
+			log.info("FAILURE - USER CREATION - problem with password or confirmpassword");
 			return ResponseEntity.badRequest().build();
-		} else {
-			log.info("User creation failure");
 		}
+
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 
 		userRepository.save(user);
-		log.info("User creation success");
+		log.info("SUCCESS - USER CREATION");
 		return ResponseEntity.ok(user);
 	}
 	

@@ -10,7 +10,7 @@
         <file>mylog.log</file>
         <append>true</append>
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{35} - %msg%n</pattern>
+            <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
         </encoder>
     </appender>
     <logger name="output" level="INFO" >
