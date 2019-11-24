@@ -3,26 +3,6 @@
 21:39:15.060 [http-nio-8080-exec-3] INFO  output - User creation failure
 21:39:50.481 [http-nio-8080-exec-8] INFO  output - Order success
 19:27:06.702 [http-nio-8080-exec-4] INFO  output - User creation failure
-19:27:06.907 [http-nio-8080-exec-4] INFO  output - User creation success
-19:28:06.722 [http-nio-8080-exec-10] INFO  output - User creation failure
-19:28:06.863 [http-nio-8080-exec-10] INFO  output - User creation success
-19:29:01.505 [http-nio-8080-exec-5] INFO  output - Order success
-19:29:35.808 [http-nio-8080-exec-7] INFO  output - Order failure due to user not present
-19:33:42.523 [http-nio-8080-exec-10] INFO  output - Order failure due to user not present
-19:33:53.656 [http-nio-8080-exec-1] INFO  output - Order success
-19:34:16.788 [http-nio-8080-exec-4] INFO  output - Order success
-2019-11-22 18:34:02,520 [main] INFO  output - Order failure due to empty cart
-2019-11-22 18:34:25,316 [main] INFO  output - Order failure due to empty cart
-2019-11-23 18:32:18,080 [http-nio-9090-exec-1] INFO  output - User creation failure
-2019-11-23 18:32:18,361 [http-nio-9090-exec-1] INFO  output - User creation success
-2019-11-23 18:32:30,333 [http-nio-9090-exec-3] INFO  output - User creation failure
-2019-11-23 18:37:43,560 [http-nio-9090-exec-2] INFO  output - User creation success
-2019-11-23 18:37:46,967 [http-nio-9090-exec-3] INFO  output - User creation failure due to duplicate username
-2019-11-23 18:37:58,668 [http-nio-9090-exec-5] INFO  output - User creation failure due to problem with password or confirmpassword
-2019-11-23 18:39:38,538 [http-nio-9090-exec-8] INFO  output - Order failure due to user not present
-2019-11-23 18:39:43,900 [http-nio-9090-exec-9] INFO  output - Order success
-2019-11-23 18:40:34,355 [http-nio-9090-exec-3] INFO  output - Order success
-2019-11-23 18:53:51,951 [http-nio-9090-exec-6] INFO  output - User creation failure due to problem with password or confirmpassword
 2019-11-23 18:57:44,004 [http-nio-9090-exec-1] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
 2019-11-23 18:57:54,615 [http-nio-9090-exec-4] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
 2019-11-23 18:58:01,055 [http-nio-9090-exec-6] INFO  output - SUCCESS - USER CREATION
@@ -48,3 +28,8 @@
 2019-11-24 14:48:25,158 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
 2019-11-24 14:48:25,160 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
 2019-11-24 14:48:36,849 [main] INFO  output - FAILURE - ORDER -  empty cart
+2019-11-24 15:02:36,144 [http-nio-9090-exec-1] INFO  output - SUCCESS - USER CREATION
+2019-11-24 15:02:46,679 [http-nio-9090-exec-3] INFO  output - FAILURE - USER CREATION - duplicate username
+2019-11-24 15:03:21,810 [http-nio-9090-exec-6] INFO  output - SUCCESS - ORDER
+2019-11-24 15:03:29,869 [http-nio-9090-exec-8] INFO  output - SUCCESS - ORDER
+2019-11-24 15:03:32,138 [http-nio-9090-exec-9] INFO  output - Order failure due to user not present

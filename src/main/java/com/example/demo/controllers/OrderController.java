@@ -37,11 +37,11 @@ public class OrderController {
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		Optional<User> optionalUser = userRepository.findByUsername(username);
 		if(!optionalUser.isPresent()) {
-			log.info("Order failure due to user not present");
+			log.info("FAILURE - ORDER - user not valid");
 			return ResponseEntity.notFound().build();
 		}
 		if (optionalUser.get().getCart() == null){
-			log.info("FAILURE - ORDER -  empty cart");
+			log.info("FAILURE - ORDER - empty cart");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(optionalUser.get().getCart());
