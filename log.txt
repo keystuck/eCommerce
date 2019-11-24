@@ -1,0 +1,125 @@
+Started by user Emily Stuckey
+Running as SYSTEM
+Building in workspace /var/jenkins_home/workspace/eCommerce-project
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/keystuck/eCommerce # timeout=10
+Fetching upstream changes from https://github.com/keystuck/eCommerce
+ > git --version # timeout=10
+ > git fetch --tags --force --progress -- https://github.com/keystuck/eCommerce +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 5302661b3149b7592d73cc985494f2334a3c42b8 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 5302661b3149b7592d73cc985494f2334a3c42b8 # timeout=10
+Commit message: "Fixed test"
+ > git rev-list --no-walk cedc047ddf5d9a32411c9dd5bf3dbbc4400f7010 # timeout=10
+[eCommerce-project] $ /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.1.1/bin/mvn -f pom.xml package
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.example:auth-course:jar:0.0.1-SNAPSHOT
+[WARNING] 'dependencyManagement.dependencies.dependency.exclusions.exclusion.artifactId' for org.quartz-scheduler:quartz:jar with value '*' does not match a valid id pattern. @ org.springframework.boot:spring-boot-dependencies:2.1.5.RELEASE, /var/jenkins_home/.m2/repository/org/springframework/boot/spring-boot-dependencies/2.1.5.RELEASE/spring-boot-dependencies-2.1.5.RELEASE.pom, line 2608, column 25
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building auth-course 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 2 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 20 source files to /var/jenkins_home/workspace/eCommerce-project/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ auth-course ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/eCommerce-project/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ auth-course ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 6 source files to /var/jenkins_home/workspace/eCommerce-project/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ auth-course ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.demo.eCommerceApplicationTests
+19:50:07.529 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.demo.eCommerceApplicationTests], using SpringBootContextLoader
+19:50:07.549 [main] INFO  o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.example.demo.eCommerceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:50:07.552 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.demo.eCommerceApplicationTests]: eCommerceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:50:07.930 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.demo.eCommerceApplication for test class com.example.demo.eCommerceApplicationTests
+19:50:08.415 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener]
+19:50:08.545 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@17a7f733, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@68567e20, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@76ed1b7c, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@11fc564b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@394a2528, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6236eb5f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7c1e2a9e, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@fa36558, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@672872e1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@32910148, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3f56875e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2b4bac49, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@fd07cbb, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3571b748]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.5.RELEASE)
+
+19:50:10.630 [main] INFO  c.e.demo.eCommerceApplicationTests - Starting eCommerceApplicationTests on 5ef44e9b170e with PID 2840 (started by jenkins in /var/jenkins_home/workspace/eCommerce-project)
+19:50:10.645 [main] INFO  c.e.demo.eCommerceApplicationTests - No active profile set, falling back to default profiles: default
+19:50:13.173 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+19:50:13.673 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 437ms. Found 4 repository interfaces.
+19:50:16.208 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3c54a83e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+19:50:16.981 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19:50:17.930 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19:50:18.236 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+19:50:18.489 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+19:50:18.494 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+19:50:19.045 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+19:50:19.611 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+19:50:24.129 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:50:27.304 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e29f28e, org.springframework.security.web.context.SecurityContextPersistenceFilter@595fed99, org.springframework.security.web.header.HeaderWriterFilter@1b1e1f02, org.springframework.web.filter.CorsFilter@7bfa1eb5, org.springframework.security.web.authentication.logout.LogoutFilter@34ab26a, com.example.demo.security.JWTAuthenticationFilter@32b46831, com.example.demo.security.JWTAuthorizationFilter@5353dd09, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ff03361, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9c0d0bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@320ff86f, org.springframework.security.web.session.SessionManagementFilter@5c5f0edc, org.springframework.security.web.access.ExceptionTranslationFilter@4a9b92c6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4def42c3]
+19:50:36.612 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+19:50:37.669 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19:50:39.500 [main] INFO  c.e.demo.eCommerceApplicationTests - Started eCommerceApplicationTests in 30.681 seconds (JVM running for 34.01)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 33.414 s - in com.example.demo.eCommerceApplicationTests
+[INFO] Running com.example.demo.controllers.OrderControllerTest
+19:50:40.735 [main] INFO  output - FAILURE - ORDER -  empty cart
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.586 s - in com.example.demo.controllers.OrderControllerTest
+[INFO] Running com.example.demo.controllers.UserControllerTest
+19:50:40.850 [main] INFO  output - SUCCESS - USER CREATION
+19:50:40.868 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
+19:50:40.871 [main] INFO  output - FAILURE - USER CREATION - problem with password or confirmpassword
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.038 s - in com.example.demo.controllers.UserControllerTest
+[INFO] Running com.example.demo.controllers.ItemControllerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in com.example.demo.controllers.ItemControllerTest
+[INFO] Running com.example.demo.controllers.CartControllerTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.example.demo.controllers.CartControllerTest
+19:50:41.069 [Thread-3] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+19:50:41.079 [Thread-3] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+19:50:41.096 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+19:50:41.141 [Thread-3] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ auth-course ---
+[INFO] Building jar: /var/jenkins_home/workspace/eCommerce-project/target/auth-course-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.1.5.RELEASE:repackage (repackage) @ auth-course ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 59.747s
+[INFO] Finished at: Sun Nov 24 19:50:53 GMT 2019
+[INFO] Final Memory: 35M/201M
+[INFO] ------------------------------------------------------------------------
+Finished: SUCCESS
